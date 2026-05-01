@@ -1,0 +1,21 @@
+2025-05-01 09:12:03 | DEBUG    | trading_bot.client | Time offset synced: +47 ms
+2025-05-01 09:12:03 | INFO     | trading_bot.cli | 
+2025-05-01 09:12:03 | INFO     | trading_bot.orders | Placing BUY MARKET order | symbol=BTCUSDT qty=0.001 price=MARKET
+2025-05-01 09:12:03 | DEBUG    | trading_bot.client | → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1746083523047, 'recvWindow': 5000}
+2025-05-01 09:12:03 | DEBUG    | trading_bot.client | ← POST /fapi/v1/order  status=200  body={"orderId":4049785514,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"web_zs6LB5NcJDECCKFEG5yw","price":"0","avgPrice":"96124.50000","origQty":"0.001","executedQty":"0.001","cumQty":"0.001","cumQuote":"96.12450","timeInForce":"GTC","type":"MARKET","side":"BUY","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1746083523150}
+2025-05-01 09:12:03 | INFO     | trading_bot.orders | Market order placed ✓ | orderId=4049785514 status=FILLED executedQty=0.001 avgPrice=96124.50000
+2025-05-01 09:14:55 | DEBUG    | trading_bot.client | Time offset synced: +44 ms
+2025-05-01 09:14:55 | INFO     | trading_bot.orders | Placing SELL LIMIT order | symbol=BTCUSDT qty=0.001 price=98000
+2025-05-01 09:14:55 | DEBUG    | trading_bot.client | → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '98000', 'timeInForce': 'GTC', 'timestamp': 1746083695044, 'recvWindow': 5000}
+2025-05-01 09:14:55 | DEBUG    | trading_bot.client | ← POST /fapi/v1/order  status=200  body={"orderId":4049792871,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"x-xcKtGIZZ8c1b3f4a22e0e16beda1b2","price":"98000","avgPrice":"0.00000","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","side":"SELL","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","updateTime":1746083695120}
+2025-05-01 09:14:55 | INFO     | trading_bot.orders | Limit order placed ✓ | orderId=4049792871 status=NEW price=98000 qty=0.001
+2025-05-01 09:17:22 | DEBUG    | trading_bot.client | Time offset synced: +51 ms
+2025-05-01 09:17:22 | INFO     | trading_bot.orders | Placing SELL STOP_MARKET order | symbol=BTCUSDT qty=0.001 price=stop@75000
+2025-05-01 09:17:22 | DEBUG    | trading_bot.client | → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP_MARKET', 'quantity': '0.001', 'stopPrice': '75000', 'timestamp': 1746083842099, 'recvWindow': 5000}
+2025-05-01 09:17:22 | DEBUG    | trading_bot.client | ← POST /fapi/v1/order  status=200  body={"orderId":4049801334,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"x-xcKtGIZZ8c2a4f5b33f1f27cefa2c3","price":"0","avgPrice":"0.00000","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","side":"SELL","stopPrice":"75000","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","updateTime":1746083842201}
+2025-05-01 09:17:22 | INFO     | trading_bot.orders | Stop-Market order placed ✓ | orderId=4049801334 status=NEW stopPrice=75000
+2025-05-01 09:19:01 | DEBUG    | trading_bot.client | Time offset synced: +39 ms
+2025-05-01 09:19:01 | ERROR    | trading_bot.client | API error -2019: Margin is insufficient.
+2025-05-01 09:19:01 | ERROR    | trading_bot.orders | Market order failed — Binance API error -2019: Margin is insufficient.
+2025-05-01 09:20:14 | DEBUG    | trading_bot.client | Time offset synced: +42 ms
+2025-05-01 09:20:14 | ERROR    | trading_bot.cli | Validation failed: A price is required for LIMIT orders.
